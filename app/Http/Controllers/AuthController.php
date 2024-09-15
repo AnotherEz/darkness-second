@@ -19,6 +19,11 @@ class AuthController extends Controller
 
     public function showDashboardForm()
     {
+        // Redirige al home si el usuario no está autenticado
+        if (!Auth::check()) {
+            return redirect()->route('home');
+        }
+
         return view('main-windows.dashboard');
     }
 
@@ -39,7 +44,7 @@ class AuthController extends Controller
         ]);
     }
 
-    // Nuevo método para cerrar sesión
+    // Método para cerrar sesión
     public function logout(Request $request)
     {
         Auth::logout(); // Cierra la sesión

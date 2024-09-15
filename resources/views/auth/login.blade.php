@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Fondo animado con gradiente */
         body {
             background: linear-gradient(270deg, #6a11cb, #2575fc);
             background-size: 400% 400%;
@@ -19,7 +19,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Animación de glitch para el título */
         @keyframes glitch {
             0% {
                 text-shadow: -2px 0 red, 2px 0 blue;
@@ -36,7 +35,6 @@
             animation: glitch 1s infinite alternate-reverse;
         }
 
-        /* Animaciones de fadeIn y slideIn */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -53,6 +51,14 @@
 
         .animate-slideIn {
             animation: slideIn 0.5s ease-out;
+        }
+
+        /* Ajuste forzado para el botón de mostrar/ocultar la contraseña */
+        .password-toggle-btn {
+            top: 50%;
+            right: 0.5rem;
+            transform: translateY(-50%);
+            padding: 0.5rem;
         }
     </style>
 </head>
@@ -82,18 +88,17 @@
                 <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
             </div>
             
-            <!-- Campo de contraseña -->
-            <div>
+            <!-- Campo de contraseña con toggle para mostrar/ocultar -->
+            <div class="relative">
                 <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
-                <input type="password" id="password" name="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+                <input type="password" id="password" name="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 pr-10">
+                <button type="button" onclick="togglePassword()" class="absolute password-toggle-btn flex items-center">
+                    <i id="passwordToggleIcon" class="fas fa-eye text-gray-500"></i>
+                </button>
             </div>
             
-            <!-- Recordarme y link de contraseña olvidada -->
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <input type="checkbox" id="remember-me" name="remember" class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded">
-                    <label for="remember-me" class="ml-2 block text-sm text-gray-700">Recordarme</label>
-                </div>
+            <!-- Link de contraseña olvidada -->
+            <div class="flex items-center justify-end">
                 <div class="text-sm">
                     <a href="{{ route('password.request') }}" class="font-medium text-purple-600 hover:text-purple-500">¿Olvidaste tu contraseña?</a>
                 </div>
@@ -114,6 +119,23 @@
             </a>
         </div>
     </div>
+
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById('password');
+            var passwordToggleIcon = document.getElementById('passwordToggleIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordToggleIcon.classList.remove('fa-eye');
+                passwordToggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                passwordToggleIcon.classList.remove('fa-eye-slash');
+                passwordToggleIcon.classList.add('fa-eye');
+            }
+        }
+    </script>
 
 </body>
 </html>
