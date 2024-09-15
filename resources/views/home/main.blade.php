@@ -124,6 +124,21 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transform: scale(1.05);
         }
+
+        /* Ajustes para el menú y contenido en móvil */
+        #menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50; /* Asegura que esté por encima del contenido */
+        }
+
+        .container {
+            margin-top: 80px; /* Ajusta según el tamaño del menú */
+            z-index: 1;
+            position: relative;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -162,7 +177,7 @@
                 </div>
             </div>
         </div>
-        <div id="menu" class="md:hidden fixed top-0 left-0 w-full bg-white shadow-lg p-4 hidden">
+        <div id="menu" class="md:hidden fixed top-0 left-0 w-full bg-white shadow-lg p-4 hidden z-50">
             <a href="{{ route('home') }}" class="block py-2 px-4 font-medium rounded transition duration-300 btn-primary {{ request()->routeIs('home') ? 'btn-primary-active' : 'hover:bg-blue-500 hover:text-white' }}">
                 Inicio
             </a>
@@ -181,21 +196,19 @@
         </div>
     </nav>
 
-    <!-- Contenido dinámico -->
-    <div class="container mx-auto px-4 py-16">
+    <!-- Contenido principal -->
+    <div class="container mx-auto px-4 py-16 relative z-10">
         @yield('content')
     </div>
-
-    <!-- Animación de Rayos -->
-    <div class="lightning-effect"></div>
-
     <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2024 Devix Solutions Software. Todos los derechos reservados.</p>
+        <p> Edinson Fernandez 2024 - Devix Solutions Software.</p>
+        <p>&copy; Todos los derechos reservados.</p>
     </footer>
-
     <script>
-        document.getElementById('menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('menu');
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.getElementById('menu');
+
+        menuButton.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
     </script>
