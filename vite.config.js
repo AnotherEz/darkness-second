@@ -8,9 +8,16 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    build:{
-        manifest:true,
-        outDir: 'public/build'
-
+    build: {
+        manifest: true, // Esto es necesario para Laravel en producción
+        outDir: 'public/build', // Usa una ruta relativa sin la barra inicial
+        rollupOptions: {
+            output: {
+                // Coloca los assets correctamente
+                entryFileNames: 'assets/[name].js',
+                chunkFileNames: 'assets/[name].js',
+                assetFileNames: 'assets/[name].[ext]'
+            },
+        },
     },
 });
