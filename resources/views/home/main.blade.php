@@ -36,27 +36,7 @@
             100% { color: #3b82f6; } /* Azul */
         }
 
-        @keyframes glitch {
-            0% { transform: translateX(0); }
-            10% { transform: translateX(-5px); }
-            20% { transform: translateX(5px); }
-            30% { transform: translateX(-5px); }
-            40% { transform: translateX(5px); }
-            50% { transform: translateX(-5px); }
-            60% { transform: translateX(5px); }
-            70% { transform: translateX(-5px); }
-            80% { transform: translateX(5px); }
-            90% { transform: translateX(-5px); }
-            100% { transform: translateX(0); }
-        }
-
-        @keyframes glitchColor {
-            0% { color: black; }
-            25% { color: red; }
-            50% { color: blue; }
-            75% { color: red; }
-            100% { color: black; }
-        }
+        
 
         .animate-fadeInUp {
             animation: fadeInUp 1s ease-out;
@@ -70,7 +50,7 @@
             animation: colorChange 2s infinite;
         }
 
-        .animate-glitch {
+        .text-head {
             position: relative;
             font-size: 1.25rem; /* Tamaño de letra aumentado */
             color: black; /* Letra negra */
@@ -78,32 +58,6 @@
             display: inline-block;
         }
 
-        .animate-glitch::before,
-        .animate-glitch::after {
-            content: 'Devix Solutions';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-            animation: glitch 1s infinite, glitchColor 2s infinite;
-        }
-
-        .animate-glitch::before {
-            color: red;
-            animation: glitch 1s infinite;
-            top: 2px; /* Desplazamiento para el efecto glitch */
-            left: -2px; /* Desplazamiento para el efecto glitch */
-        }
-
-        .animate-glitch::after {
-            color: blue;
-            animation: glitch 1.5s infinite;
-            top: -2px; /* Desplazamiento para el efecto glitch */
-            left: 2px; /* Desplazamiento para el efecto glitch */
-        }
 
         .btn-primary {
             background-color: #ffffff; /* Blanco */
@@ -148,7 +102,7 @@
                 <div class="flex items-center space-x-7">
                     <div>
                         <a href="#" class="flex items-center py-4 px-2">
-                            <span class="font-semibold text-gray-500 text-lg animate-glitch">Devix Solutions</span>
+                            <span class="font-semibold text-gray-500 text-lg text-head">Devix Solutions</span>
                         </a>
                     </div>
                 </div>
