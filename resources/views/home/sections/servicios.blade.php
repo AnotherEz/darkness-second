@@ -31,7 +31,7 @@
             </div>
             <div class="bg-white rounded-lg shadow-lg p-6 animate-fadeInUp" style="animation-delay: 1.2s;">
                 <h3 class="text-lg sm:text-xl font-semibold mb-2">Consultoría IT</h3>
-                <p class="text-gray-600">Te brindamos el soporte necesario para implementar soluciones tecnológicas de última generación.</p>
+                <p class="text-gray-600">Te brindamos el soporte necesario para implementar soluciones tecnológicas de última generación. </p>
             </div>
         </div>
     </div>
