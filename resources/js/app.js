@@ -5,7 +5,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuButton.addEventListener('click', () => {
         menu.classList.toggle('hidden');
-
-    
     });
 });
