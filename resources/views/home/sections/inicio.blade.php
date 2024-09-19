@@ -17,15 +17,14 @@
     <div class="container mx-auto px-4">
         <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 animate-fadeInUp">Proyectos en desarrollo a la fecha.</h2>
         <div class="flex flex-col sm:flex-row sm:space-x-8">
-            <x-project-info 
+            <x-project-details 
              description="Este sitio web es de Shirley's Petals & Presents, una tienda que ofrece arreglos florales y servicios personalizados, destacando su pasión por crear detalles únicos para cada ocasión. Incluye productos destacados, información sobre sus servicios como entregas a domicilio y testimonios de clientes satisfechos, con un enfoque en ofrecer experiencias memorables a través de las flores."
              link="https://shirley.up.railway.app"
             />
-            <x-project-info 
+            <x-project-details 
              description="Este sitio web es de Centro de Fisioterapia y Rehabilitación Mas Salud  especializado en fisioterapia y rehabilitación, enfocado en mejorar la calidad de vida de los pacientes mediante tratamientos personalizados. Incluiría información sobre los servicios disponibles, como terapia física, rehabilitación deportiva y postoperatoria, además de secciones sobre el equipo de especialistas, horarios de atención, y contacto para agendar citas. El diseño destacaría la confianza, la atención profesional y el bienestar integral del paciente."
              link="https://massalud.up.railway.app"
             />
-
         </div>
     </div>
 </div>

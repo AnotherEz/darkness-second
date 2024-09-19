@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class ProjectInfo extends Component
+class ProjectDetails extends Component
 {
     public $description;
     public $link;
@@ -27,6 +27,6 @@ class ProjectInfo extends Component
      */
     public function render()
     {
-        return view('components.project-info');
+        return view('components.project-details');
     }
 }

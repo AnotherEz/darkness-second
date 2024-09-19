@@ -1,5 +1,6 @@
 @extends('home.main')
 
+
 @section('content')
 <div class="text-center animate-fadeInUp px-4 sm:px-6 lg:px-8">
     <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 animate-color-change">Sobre Nosotros</h1>
