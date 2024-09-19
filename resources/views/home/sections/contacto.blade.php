@@ -9,6 +9,14 @@
 <div class="bg-gray-200 py-8 sm:py-12 lg:py-16">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- GitHub -->
+            <div class="bg-white rounded-lg shadow-lg p-6 animate-fadeInUp" style="animation-delay: 0.8s;">
+                <h3 class="text-lg sm:text-xl font-semibold mb-2">GitHub</h3>
+                <p class="text-gray-600 mb-4">Explora mis proyectos y contribuciones en GitHub.</p>
+                <a href="https://github.com/AnotherEz" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 flex items-center justify-center">
+                    <i class="fab fa-github mr-2"></i> Ver Perfil
+                </a>
+            </div>
             <!-- WhatsApp -->
             <div class="bg-white rounded-lg shadow-lg p-6 animate-fadeInUp" style="animation-delay: 0.2s;">
                 <h3 class="text-lg sm:text-xl font-semibold mb-2">WhatsApp</h3>
@@ -36,14 +44,7 @@
                 </a>
             </div>
 
-            <!-- GitHub -->
-            <div class="bg-white rounded-lg shadow-lg p-6 animate-fadeInUp" style="animation-delay: 0.8s;">
-                <h3 class="text-lg sm:text-xl font-semibold mb-2">GitHub</h3>
-                <p class="text-gray-600 mb-4">Explora mis proyectos y contribuciones en GitHub.</p>
-                <a href="https://github.com/AnotherEz" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 flex items-center justify-center">
-                    <i class="fab fa-github mr-2"></i> Ver Perfil
-                </a>
-            </div>
+            
         </div>
     </div>
 </div>
