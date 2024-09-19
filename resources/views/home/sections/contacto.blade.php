@@ -9,6 +9,7 @@
 <div class="bg-gray-200 py-8 sm:py-12 lg:py-16">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+           
             <!-- GitHub -->
             <div class="bg-white rounded-lg shadow-lg p-6 animate-fadeInUp" style="animation-delay: 0.8s;">
                 <h3 class="text-lg sm:text-xl font-semibold mb-2">GitHub</h3>
@@ -17,6 +18,7 @@
                     <i class="fab fa-github mr-2"></i> Ver Perfil
                 </a>
             </div>
+
             <!-- WhatsApp -->
             <div class="bg-white rounded-lg shadow-lg p-6 animate-fadeInUp" style="animation-delay: 0.2s;">
                 <h3 class="text-lg sm:text-xl font-semibold mb-2">WhatsApp</h3>
@@ -44,7 +46,6 @@
                 </a>
             </div>
 
-            
         </div>
     </div>
 </div>
