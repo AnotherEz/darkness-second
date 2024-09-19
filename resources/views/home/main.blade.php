@@ -24,7 +24,7 @@
                         <i class="fas fa-bars fa-lg"></i>
                     </button>
                 </div>
-                <div class="hidden md:flex items-center space-x-3">
+                <div id="menu" class="hidden md:flex items-center space-x-3 -translate-x-full">
                     <x-section title="Inicio" route="home"/>
                     <x-section title="Servicios" route="servicios"/>
                     <x-section title="Sobre Nosotros" route="sobre-nosotros"/>
@@ -36,13 +36,25 @@
     </nav>
 
     <!-- Contenido principal -->
-    <div class="container mx-auto px-4 py-16 relative z-10">
+    <div id="main-content" class="container mx-auto px-4 py-16 relative z-10">
         @yield('content')
     </div>
+
+    <!-- Botón de usuario -->
+    <div class="absolute top-4 right-4">
+        <button id="user-button" class="bg-blue-500 text-white px-4 py-2 rounded">Usuario</button>
+        <div id="user-menu" class="hidden bg-white shadow-md p-4 rounded-lg absolute top-12 right-0">
+            <a href="#" class="block px-4 py-2 text-gray-800">Perfil</a>
+            <a href="#" class="block px-4 py-2 text-gray-800">Cerrar sesión</a>
+        </div>
+    </div>
+
     <footer class="bg-gray-800 text-white text-center py-4">
         <p>Edinson Fernandez 2024 - Devix Solutions Software.</p>
         <p>&copy; Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
