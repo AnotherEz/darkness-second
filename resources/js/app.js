@@ -1,29 +1,37 @@
 import './bootstrap';
-// Menú deslizante
-const menuButton = document.getElementById('menu-button');
-const menu = document.getElementById('menu');
-const mainContent = document.getElementById('main-content');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('menu-button');
+    const closeButton = document.getElementById('close-menu');
+    const mobileMenuContainer = document.getElementById('mobile-menu-container');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 
-menuButton.addEventListener('click', () => {
-    menu.classList.toggle('-translate-x-full');
-    if (menu.classList.contains('-translate-x-full')) {
-        mainContent.style.marginLeft = '0';
-    } else {
-        mainContent.style.marginLeft = '16rem'; // 64px * 4 (w-64)
+    function openMenu() {
+        mobileMenuContainer.classList.remove('hidden');
+        setTimeout(() => {
+            mobileMenu.classList.add('translate-y-0');
+            mobileMenu.classList.remove('-translate-y-full');
+        }, 10);
     }
-});
 
-// Menú de usuario
-const userButton = document.getElementById('user-button');
-const userMenu = document.getElementById('user-menu');
-
-userButton.addEventListener('click', () => {
-    userMenu.classList.toggle('hidden');
-});
-
-// Cierra el menú de usuario si se hace clic fuera de él
-window.addEventListener('click', (e) => {
-    if (!userButton.contains(e.target) && !userMenu.contains(e.target)) {
-        userMenu.classList.add('hidden');
+    function closeMenu() {
+        mobileMenu.classList.remove('translate-y-0');
+        mobileMenu.classList.add('-translate-y-full');
+        setTimeout(() => {
+            mobileMenuContainer.classList.add('hidden');
+        }, 300);
     }
+
+    menuButton.addEventListener('click', openMenu);
+    closeButton.addEventListener('click', closeMenu);
+    mobileMenuOverlay.addEventListener('click', closeMenu);
+
+    // Cierra el menú si se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+        if (!mobileMenuContainer.classList.contains('hidden') &&
+            !mobileMenu.contains(event.target) &&
+            !menuButton.contains(event.target)) {
+            closeMenu();
+        }
+    });
 });
