@@ -12,8 +12,8 @@
 
 
 
-<!-- Proyectos en desarrollo -->
-<div class="bg-gray-100 py-12 sm:py-16 lg:py-20">
+ <!-- Proyectos en desarrollo -->
+{{-- <div class="bg-gray-100 py-12 sm:py-16 lg:py-20">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 animate-fadeInUp">Proyectos en desarrollo a la fecha.</h2>
         <div class="flex flex-col sm:flex-row sm:space-x-8">
@@ -27,7 +27,7 @@
             />
         </div>
     </div>
-</div>
+</div> --}}
 
 <!-- Sección de Valor Añadido -->
 <div class="bg-gray-50 py-12 sm:py-16 lg:py-20">
