@@ -15,8 +15,8 @@
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-7">
                     <div>
-                        <a href="#" class="flex items-center py-4 px-2">
-                            <span class="font-semibold text-head">Devix Solutions</span>
+                        <a href="/" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-head hover:text-blue-600 transition duration-200">Devix Solutions</span>
                         </a>
                     </div>
                 </div>
