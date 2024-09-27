@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devix Solutions Software</title>
-    <link rel="icon" href="{{ asset('/public/Icono.ico') }}" type="image/x-icon">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Devix Solutions - Soluciones de Software a Medida</title>
+    
+        <meta name="description" content="En Devix Solutions ofrecemos soluciones innovadoras y personalizadas en desarrollo de software, diseñadas para mejorar la eficiencia y productividad de tu negocio.">
+        <meta name="keywords" content="desarrollo de software, soluciones a medida, software personalizado, desarrollo web, Devix Solutions, tecnología, programación, apps, servicios tecnológicos">
+        <meta name="author" content="Devix Solutions">
+        <meta name="robots" content="index, follow">
+    
+        <!-- Favicon -->
+        <link rel="icon" href="{{ asset('/public/Icono.ico') }}" type="image/x-icon">
+    
+        <!-- Open Graph Meta Tags (para mejorar la compartición en redes sociales) -->
+        <meta property="og:title" content="Devix Solutions - Soluciones de Software a Medida">
+        <meta property="og:description" content="Aumenta la productividad de tu negocio con soluciones de software desarrolladas específicamente para tus necesidades.">
+        <meta property="og:image" content="{{ asset('/public/og-image.jpg') }}">
+        <meta property="og:url" content="https://devix.up.railway.app">
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Devix Solutions - Soluciones de Software a Medida">
+        <meta name="twitter:description" content="Descubre cómo podemos ayudarte a optimizar tu negocio con soluciones de software a medida.">
+        <meta name="twitter:image" content="{{ asset('/public/twitter-image.jpg') }}">
+    
+        <!-- Vite and Styles -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+        <!-- Preconnect para mejorar la velocidad de carga -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+        <!-- SEO enhancements -->
+        <link rel="canonical" href="https://www.devixsolutions.com">
+    </head>
+    
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <nav class="bg-white shadow-lg">
         <div class="max-w-6xl mx-auto px-4 py-2">
